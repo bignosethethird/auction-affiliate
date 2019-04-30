@@ -1,0 +1,37 @@
+img.af {
+  border: 1px solid #888888;
+  margin: 5px 10px 0 0;
+}
+table.af {
+  font-size: .90em
+  color: #999
+  font-weight: normal
+  text-align: left
+  border-width: 1px;
+  border-spacing: 2px;
+  border-style: none;
+  border-collapse: separate;
+}
+table.af th {
+  font-weight: bold;
+  border-width: 1px;
+  padding: 1px;
+  border-style: none;
+}
+table.af_title td{
+  width: 98%;
+  font-size:15px;
+  font-weight:bold;
+  line-height: 25px;
+}
+table.af_label td {
+  font-size: 10px;
+  font-weight:bold;
+  text-align: left;
+}
+table.af_content td {
+  border-width: 1px;
+  padding: 1px;
+  border-style: none;
+}
+
