@@ -51,7 +51,7 @@ other in a side column for 6 auction items.
 
 * Auction Item Id - a 12-digit number, which you copy and paste from the eBay web page in the Description section where it says: ```"eBay item number: XXXXXXXXXXXX"```, or from the URL
 * Comment - you can add an additional comment about the auction item. If left blank, no comment will be displayed.
-* eBay API account Id in the form ```XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX```. You get this Id when you register at [http://developer.ebay.com](# http://developer.ebay.com). By default, the authors's API Id is set on in the module already to get you started, but strictly speaking, you should replace it with your own API account Id.
+* eBay API account Id in the form ```XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX```. You get this Id when you register at [http://developer.ebay.com](http://developer.ebay.com). By default, the authors's API Id is set on in the module already to get you started, but strictly speaking, you should replace it with your own API account Id.
 
 ### The less frequently-configured bits
 
@@ -90,13 +90,13 @@ Uninstall the module through the Joomla Extension Manager. You will loose your c
 
 ## Support
 
-You can get further support here: [https://github.com/gerritonagoodday/auction-affiliate](# https://github.com/gerritonagoodday/auction-affiliate), or contact the author directly at [gerrit@hoekstra.co.uk](# mailto:gerrit@hoekstra.co.uk). Also see [www.hoekstra.co.uk](# www.hoekstra.co.uk) for more details and often and actual eBay item on display.
+You can get further support here: [https://github.com/gerritonagoodday/auction-affiliate](https://github.com/gerritonagoodday/auction-affiliate), or contact the author directly at [gerrit@hoekstra.co.uk](# mailto:gerrit@hoekstra.co.uk). Also see [www.hoekstra.co.uk](# www.hoekstra.co.uk) for more details and often and actual eBay item on display.
 
 ## Known bugs and Feature Requests
 
 Lodge any issues you find and feature requests here:
 
-[https://github.com/gerritonagoodday/auction-affiliate/issues](# https://github.com/gerritonagoodday/auction-affiliate/issues)
+[https://github.com/gerritonagoodday/auction-affiliate/issues](https://github.com/gerritonagoodday/auction-affiliate/issues)
 
 ## Licensing
 
