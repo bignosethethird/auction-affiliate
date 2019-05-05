@@ -90,7 +90,7 @@ Uninstall the module through the Joomla Extension Manager. You will loose your c
 
 ## Support
 
-You can get further support here: [https://github.com/gerritonagoodday/auction-affiliate](https://github.com/gerritonagoodday/auction-affiliate), or contact the author directly at [gerrit@hoekstra.co.uk](# mailto:gerrit@hoekstra.co.uk). Also see [www.hoekstra.co.uk](# www.hoekstra.co.uk) for more details and often and actual eBay item on display.
+You can get further support here: [https://github.com/gerritonagoodday/auction-affiliate](https://github.com/gerritonagoodday/auction-affiliate), or contact the author directly at [gerrit@hoekstra.co.uk](mailto:gerrit@hoekstra.co.uk). Also see [www.hoekstra.co.uk](www.hoekstra.co.uk) for more details and often and actual eBay item on display.
 
 ## Known bugs and Feature Requests
 
