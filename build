@@ -27,10 +27,10 @@ find . -name "*~" -exec rm -f {} \;  -print
 
 printf "  Building zip package mod_%s_%s.zip in the .build directory...\n" ${PROJECT} ${VERSION}
 [[ -f .build/mod_${PROJECT}_${VERSION}.zip ]] && rm -f .build/mod_${PROJECT}_${VERSION}.zip
-zip -r .build/mod_${PROJECT}_${VERSION}.zip mod_${PROJECT} -x mod_${PROJECT}/.\* -x manifest.xml > /dev/null
+zip -r .build/mod_${PROJECT}_${VERSION}.zip mod_${PROJECT} -x mod_${PROJECT}/.\* > /dev/null
 
 printf "  Building zip package mod_%s_%s.tar.gz in the .build directory...\n" ${PROJECT} ${VERSION}
 [[ -f .build/mod_${PROJECT}_${VERSION}.tar.gz ]] && rm -f .build/mod_${PROJECT}_${VERSION}.tar.gz
-tar -czvf .build/mod_${PROJECT}_${VERSION}.tar.gz  --exclude='.*' --exclude='*~' mod_${PROJECT} --exclude="manifest.xml"  > /dev/null
+tar -czvf .build/mod_${PROJECT}_${VERSION}.tar.gz  --exclude='.*' --exclude='*~' mod_${PROJECT} > /dev/null
 
 printf "Done\n"

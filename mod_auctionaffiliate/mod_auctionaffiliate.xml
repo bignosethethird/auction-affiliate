@@ -43,7 +43,6 @@ This module displays an eBay auction item in a Joomla! web page in a Joomla modu
 
   <files folder="modules/mod_auctionaffiliate">
     <filename module="mod_auctionaffiliate">mod_auctionaffiliate.php</filename>    
-    <filename>README.md</filename>    
     <filename>helper.php</filename>
     <filename>functions.php</filename>
     <filename>index.html</filename>
