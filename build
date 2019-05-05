@@ -1,5 +1,4 @@
 #!/bin/bash
-# $Id: build 50 2013-11-17 15:00:32Z gerrit_hoekstra $
 # Parameters:
 # 1: Module Name - defaults to this this project
 # {{ Change this line when building a new Joomla Module:
@@ -20,15 +19,18 @@ fi
 
 printf "Building module mod_%s version %s...\n" $PROJECT $VERSION
 
-printf "  Removing cruft...\n"
+printf "  Removing cruft first...\n"
 find . -name "*~" -exec rm -f {} \;  -print
 
-printf "  Building zip package...\n"
-[[ -f mod_${PROJECT}_${VERSION}.zip ]] && rm -f mod_${PROJECT}_${VERSION}.zip
-zip -r mod_${PROJECT}_${VERSION}.zip mod_${PROJECT} -x mod_${PROJECT}/.\*
+[[ ! -d .build ]] && mkdir -p .build
 
-printf "  Building tar.gz package...\n"
-[[ -f mod_${PROJECT}_${VERSION}.tar.gz ]] && rm -f mod_${PROJECT}_${VERSION}.tar.gz
-tar -czvf mod_${PROJECT}_${VERSION}.tar.gz  --exclude='.*' --exclude='*~' mod_${PROJECT}
+
+printf "  Building zip package mod_%s_%s.zip in the .build directory...\n" ${PROJECT} ${VERSION}
+[[ -f .build/mod_${PROJECT}_${VERSION}.zip ]] && rm -f .build/mod_${PROJECT}_${VERSION}.zip
+zip -r .build/mod_${PROJECT}_${VERSION}.zip mod_${PROJECT} -x mod_${PROJECT}/.\* > /dev/null
+
+printf "  Building zip package mod_%s_%s.tar.gz in the .build directory...\n" ${PROJECT} ${VERSION}
+[[ -f .build/mod_${PROJECT}_${VERSION}.tar.gz ]] && rm -f .build/mod_${PROJECT}_${VERSION}.tar.gz
+tar -czvf .build/mod_${PROJECT}_${VERSION}.tar.gz  --exclude='.*' --exclude='*~' mod_${PROJECT}  > /dev/null
 
 printf "Done\n"

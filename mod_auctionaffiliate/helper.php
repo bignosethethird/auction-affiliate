@@ -36,11 +36,11 @@ class mod_auctionaffiliate {
 
     // Check that necessary parameters are set up before proceeding
     if(!$SafeItemID || strlen($SafeItemID)!=12){
-      JError::raiseWarning(100,JTEXT::sprintf('ERROR_ITEM_ID',JTEXT::_('MODULE')),JTEXT::_('ERROR_ITEM_ID_INFO'));
+      JError::raiseWarning(100,JTEXT::sprintf('ERROR_ITEM_ID',JTEXT::_('MODULE_NAME')),JTEXT::_('ERROR_ITEM_ID_INFO'));
       return;
     }
     if($affiliate_enable && (!$affiliate_trackingid || !$affiliate_partner)){
-      JError::raiseWarning(101,JTEXT::sprintf('ERROR_AFFILIATE_ID',JTEXT::_('MODULE')),JTEXT::_('ERROR_AFFILIATE_ID_INFO'));
+      JError::raiseWarning(101,JTEXT::sprintf('ERROR_AFFILIATE_ID',JTEXT::_('MODULE_NAME')),JTEXT::_('ERROR_AFFILIATE_ID_INFO'));
       return;
     }
 
@@ -83,14 +83,14 @@ class mod_auctionaffiliate {
           $resp = simplexml_load_string(curl_get_contents($apicall));
         }
       }else{
-        JError::raiseWarning(103,JTEXT::sprintf('ERROR_PHP_CONFIG',JTEXT::_('MODULE'),$SafeItemID, $sourceSite),JTEXT::_('ERROR_PHP_CONFIG_INFO'));
+        JError::raiseWarning(103,JTEXT::sprintf('ERROR_PHP_CONFIG',JTEXT::_('MODULE_NAME'),$SafeItemID, $sourceSite),JTEXT::_('ERROR_PHP_CONFIG_INFO'));
       }
     }
 
     if ($resp->Item) {
       return $resp->Item;
     }else{
-      JError::raiseWarning(102,JTEXT::sprintf('ERROR_API_ITEM',JTEXT::_('MODULE'),$SafeItemID, $sourceSite),JTEXT::_('ERROR_API_ITEM_INFO'));
+      JError::raiseWarning(102,JTEXT::sprintf('ERROR_API_ITEM',JTEXT::_('MODULE_NAME'),$SafeItemID, $sourceSite),JTEXT::_('ERROR_API_ITEM_INFO'));
       return;
     }
   }

@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Id: mod_auctionaffiliate.xml 50 2013-11-17 15:00:32Z gerrit_hoekstra $ -->
-<!-- File structure explained here: http://docs.joomla.org/Using_the_installer_API_to_support_package_installation -->
-<!-- Extension Install Script -->
-<extension type="module" version="3.2.0.1" client="site" method="upgrade">
-  <name>Auction Affiliate</name>
+<extension type="module" version="3.2.0v2" client="site" method="upgrade">
+  <name>MODULE_NAME</name>
   <author>Gerrit Hoekstra</author>
   <creationDate>17NOV2013</creationDate>
-  <copyright>Copyright (C) 2011-2013 www.hoekstra.co.uk. All rights reserved.</copyright>
+  <copyright>Copyright (C) 2013-2019 www.hoekstra.co.uk. All rights reserved.</copyright>
   <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
-  <authorEmail>gerrit@hoekstra.co.uk</authorEmail>
-  <authorUrl>>www.hoekstra.co.uk</authorUrl>
-  <version>3.2.0.1</version>
+  <authorEmail>gerrit@hoekstra.co.uk</authorEmail>  
+  <authorUrl>https://github.com/gerritonagoodday/auction-affiliate</authorUrl>
+  <version>3.2.0v2</version>
+  
   <description><![CDATA[
         <div align="center">
           <table border="0" width="90%">
@@ -24,11 +22,8 @@
             </tr>
             <tr>
               <td width="100%" colspan="2">
-                <div align="left">
-<strong>Advertise and direct web traffic to your eBay auction, or draw affiliation revenue from other eBay auctions!</strong><br/><br/>
-This module displays an eBay auction item on a Joomla CMS web page. The auction item can be your own auction, a friend's or that of someone unknown.
-Through this module, a visitor can go directly to eBay from your website, bid and complete a successful transaction. If you are a registered affiliate,
-you can make a little money too. You can choose what information about the item you want to display and also whether you want to enable the eBay affiliation function at all.
+                <div align="left"><strong>Advertise and direct web traffic to your eBay auction, or draw affiliation revenue from other eBay auctions!</strong><br/><br/>
+This module displays an eBay auction item in a Joomla! web page in a Joomla module position. To display multiple auction items, simply instantiate multiple modules. The auction item(s) can be your own auction, a friend's or that of someone unknown. Through this module, a visitor can go directly to eBay from your website, bid and complete a successful transaction. You can choose what information about the item you want to display and optionally wether you want to enable eBay affiliation. If you are a registered affiliate, you will receive an affiliation fee in recognition of having facilitated the succcessfull transaction.
                 </div>
               </td>
             </tr>
@@ -40,10 +35,15 @@ you can make a little money too. You can choose what information about the item 
         </div>
     ]]>
   </description>
-      
-  <files>
-    <filename module="mod_auctionaffiliate">mod_auctionaffiliate.php</filename>
-    <filename>README.txt</filename>
+
+  <!-- manifest.xml only lives on update server-->
+	<updateservers>
+		<server type="extension" name="Auction Affiliate Update Site">https://raw.githubusercontent.com/gerritonagoodday/auction-affiliate/master/manifest.xml</server>
+	</updateservers> 
+
+  <files folder="modules/mod_auctionaffiliate">
+    <filename module="mod_auctionaffiliate">mod_auctionaffiliate.php</filename>    
+    <filename>README.md</filename>    
     <filename>helper.php</filename>
     <filename>functions.php</filename>
     <filename>index.html</filename>
@@ -59,8 +59,11 @@ you can make a little money too. You can choose what information about the item 
   <!-- Language -->
   <languages folder="language">
     <language tag="en-GB">en-GB/en-GB.mod_auctionaffiliate.ini</language>
+    <language tag="en-GB">en-GB/en-GB.mod_auctionaffiliate.sys.ini</language>
     <language tag="de-DE">de-DE/de-DE.mod_auctionaffiliate.ini</language>
+    <language tag="de-DE">de-DE/de-DE.mod_auctionaffiliate.sys.ini</language>
     <language tag="af-ZA">af-ZA/af-ZA.mod_auctionaffiliate.ini</language>
+    <language tag="af-ZA">af-ZA/af-ZA.mod_auctionaffiliate.sys.ini</language>
   </languages>
 
   <!-- Configuration -->
@@ -68,7 +71,6 @@ you can make a little money too. You can choose what information about the item 
     <fields name="params">
       
       <fieldset name="basic" label="ARTICLE_OPTIONS_FIELDSET">
-        <!--        <field type="spacer" class="text" label="ARTICLE_OPTIONS_DESC" /> -->        
         <field name="itemid" type="text" size="48" default="" label="ITEMIDEBAY" description="ITEMIDEBAY_DESC" />
         <field name="comment" type="textarea" default="" label="COMMENT" description="COMMENT_DESC" cols="40" rows="3" />        
         <field name="apiid" type="text" size="48" default="GerritHo-d209-4e67-a991-38a0bfaf54be" label="APIID" description="APIID_DESC"/>

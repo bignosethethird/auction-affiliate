@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Can't use Language IDs here -->
+<updates>
+    <update>
+        <name>Auction Affiliate</name>
+        <description><![CDATA[
+        <div align="center">
+          <table border="0" width="90%">
+            <tr>
+              <td width="100%" colspan="2">
+                <div align="center">
+                  <h3>Auction Affiliate Module for Joomla! 3.x</h3>
+                </div>
+                <hr />
+              </td>
+            </tr>
+            <tr>
+              <td width="100%" colspan="2">
+                <div align="left"><strong>Advertise and direct web traffic to your eBay auction, or draw affiliation revenue from other eBay auctions!</strong><br/><br/>
+This module displays an eBay auction item in a Joomla! web page in a Joomla module position. To display multiple auction items, simply instantiate multiple modules. The auction item(s) can be your own auction, a friend's or that of someone unknown. Through this module, a visitor can go directly to eBay from your website, bid and complete a successful transaction. You can choose what information about the item you want to display and optionally wether you want to enable eBay affiliation. If you are a registered affiliate, you will receive an affiliation fee in recognition of having facilitated the succcessfull transaction.
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td width="18%"><strong>Languages supported:</strong></td>
+              <td width="80%"><ul><li>English (en-GB)</li><li>German (de-DE)<li>Afrikaans (af-ZA)</li></ul></td>
+            </tr>
+          </table>
+        </div>
+    ]]>
+        </description>
+        <element>mod_auctionaffiliate</element>
+        <type>module</type>
+        <version>3.2.0v2</version>
+        <client>site</client>
+        <!-- Displays Info about this release -->
+        <infourl title="Auction Affiliate">https://github.com/gerritonagoodday/auction-affiliate/releases/tag/3.2.0v2</infourl>
+        <downloads>
+            <!-- The actual URL where the zip file is downloaded from -->
+            <downloadurl type="full" format="zip">https://github.com/gerritonagoodday/auction-affiliate/releases/tag/3.2.0v2</downloadurl>
+        </downloads>
+        <tags>
+			    <tag>stable</tag>
+		    </tags>
+        <maintainer>Gerrit Hoekstra</maintainer>
+        <maintainerurl>https://www.hoekstra.co.uk</maintainerurl>
+        <!-- Tested on all Joomla platforms 3.*, 4.* -->
+        <targetplatform name="joomla" version=".*" />
+    </update>
+</updates>
