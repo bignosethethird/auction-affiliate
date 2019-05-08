@@ -4,7 +4,33 @@
 
 > This module displays an eBay auction item in a Joomla! web page in a Joomla module position. To display multiple auction items, simply instantiate multiple modules. The auction item(s) can be your own auction, a friend's or that of someone unknown. Through this module, a visitor can go directly to eBay from your website, bid and complete a successful transaction. You can choose what information about the item you want to display and optionally wether you want to enable eBay affiliation. If you are a registered affiliate, you will receive an affiliation fee in recognition of having facilitated the succcessfull transaction.
 
-## Why is this module useful?
+## Table of Contents
+
+  - [Why is this module useful?](#why-is-this-module-useful)
+  - [What does it do?](#what-does-it-do)
+  - [The Care, Feeding and Configuration of your Module](#the-care,-feeding-and-configuration-of-your-module)
+    - [This is what you can configure](#this-is-what-you-can-configure)
+      - [The frequently-configured bits](#the-frequently-configured-bits)
+      - [The less frequently-configured bits](#the-less-frequently-configured-bits)
+      - [The occasionally-configured bits](#the-occasionally-configured-bits)
+      - [The seldomly-configured bits](#the-seldomly-configured-bits)
+      - [The mega-geek bits](#the-mega-geek-bits)
+  - [Installation](#installation)
+  - [Uninstallation](#uninstallation)
+  - [Support](#support)
+  - [Known bugs and Feature Requests](#known-bugs-and-feature-requests)
+  - [Licensing](#licensing)
+  - [F.A.Q.](#f.a.q.)
+      - [How do I show many auction items on a page?](#how-do-i-show-many-auction-items-on-a-page)
+
+_NOTE:_
+
+>You can update this TOC as follows:
+```awk
+ awk '/^#/ {gsub(/#/,"  ",$1); printf "%s- ", $1; $1=""; sub(/^ /,"");  printf "[%s]", $0; gsub(/\s+/,"-"); gsub(/[\!|\?\:]/,""); printf "(#%s)\n", tolower($0)}' README.md 
+```
+
+# Why is this module useful?
 
 * It offers an easy way of showing your website visitors what you are selling on eBay
 * Simple configuration - the mimimum configuration you need to do to set it up in an good position in your template and to enter the eBay Item number in the module configuration. There are lots of other nice goodies to configure in the module too, by the way.
@@ -12,7 +38,7 @@
 * Use it to direct web traffic to your eBay auction, which means that more people will bid, which in turn means that you can potentially realize a higher final auction sale value.
 * Remember, you can set this affiliation up for anybody's item on eBay, not just your own items.
 
-## What does it do?
+# What does it do?
 
 It displays the following:
 
@@ -77,28 +103,28 @@ other in a side column for 6 auction items.
 * API Encoding - if you use PHP version >= 5.12, then the API encoding is done with JSON. Older versions of PHP only work with XML.
 * Debug - enable this to display the content of the API calls displayed. This setting is not affected by the Global Debug setting, nor does this setting affect the Global one.
 
-## Installation
+# Installation
 
 Steps:
 
 * You have Joomla installed on your webserver, right?
 * The module's ZIP package is installed using the standard Joomla Component Installer mechanism.
 
-## Uninstallation
+# Uninstallation
 
 Uninstall the module through the Joomla Extension Manager. You will loose your configuration data, so jot down the details first if they are important to you.
 
-## Support
+# Support
 
 You can get further support here: [https://github.com/gerritonagoodday/auction-affiliate](https://github.com/gerritonagoodday/auction-affiliate), or contact the author directly at [gerrit@hoekstra.co.uk](mailto:gerrit@hoekstra.co.uk). Also see [www.hoekstra.co.uk](www.hoekstra.co.uk) for more details and often and actual eBay item on display.
 
-## Known bugs and Feature Requests
+# Known bugs and Feature Requests
 
 Lodge any issues you find and feature requests here:
 
 [https://github.com/gerritonagoodday/auction-affiliate/issues](https://github.com/gerritonagoodday/auction-affiliate/issues)
 
-## Licensing
+# Licensing
 
 This is the brave new world of open source where giants cower in fear of the
 little man who releases a nice bit of usefull free software. Well, maybe not
