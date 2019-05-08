@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension type="module" version="3.2.0v2" client="site" method="upgrade">
+<extension type="module" version="3.2.0v3" client="site" method="upgrade">
   <name>MODULE_NAME</name>
   <author>Gerrit Hoekstra</author>
-  <creationDate>17NOV2013</creationDate>
+  <creationDate>November 2013</creationDate>
+  <updateDate>May 2019</updateDate>
   <copyright>Copyright (C) 2013-2019 www.hoekstra.co.uk. All rights reserved.</copyright>
   <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
   <authorEmail>gerrit@hoekstra.co.uk</authorEmail>  
   <authorUrl>https://github.com/gerritonagoodday/auction-affiliate</authorUrl>
-  <version>3.2.0v2</version>
+  <version>3.2.0v3</version>
   
   <description><![CDATA[
         <div align="center">
           <table border="0" width="90%">
             <tr>
               <td width="100%" colspan="2">
-                <div align="center">
-                  <h3>Auction Affiliate Module for Joomla! 3.x</h3>
+                <div align="left">
+                  <h3>Auction Affiliate Module for Joomla! 3.x Version 3.2.0v3</h3>
                 </div>
                 <hr />
               </td>
@@ -36,10 +37,10 @@ This module displays an eBay auction item in a Joomla! web page in a Joomla modu
     ]]>
   </description>
 
-  <!-- manifest.xml only lives on update server-->
-	<updateservers>
-		<server type="extension" name="Auction Affiliate Update Site">https://raw.githubusercontent.com/gerritonagoodday/auction-affiliate/master/manifest.xml</server>
-	</updateservers> 
+  <!-- manifest.xml only lives on update server. Remember to consistently change the version-tag here and in the manifest.xml when doing a new release. -->
+  <updateservers>
+    <server type="extension" name="Auction Affiliate Update Site">https://raw.githubusercontent.com/gerritonagoodday/auction-affiliate/master/manifest.xml</server>
+  </updateservers> 
 
   <files folder="modules/mod_auctionaffiliate">
     <filename module="mod_auctionaffiliate">mod_auctionaffiliate.php</filename>    
@@ -68,43 +69,41 @@ This module displays an eBay auction item in a Joomla! web page in a Joomla modu
   <!-- Configuration -->
   <config>
     <fields name="params">
-      
       <fieldset name="basic" label="ARTICLE_OPTIONS_FIELDSET">
         <field name="itemid" type="text" size="48" default="" label="ITEMIDEBAY" description="ITEMIDEBAY_DESC" />
-        <field name="comment" type="textarea" default="" label="COMMENT" description="COMMENT_DESC" cols="40" rows="3" />        
+        <field name="comment" type="textarea" default="" label="COMMENT" description="COMMENT_DESC" cols="40" rows="3" />
         <field name="apiid" type="text" size="48" default="GerritHo-d209-4e67-a991-38a0bfaf54be" label="APIID" description="APIID_DESC"/>
-      
       </fieldset>
-      
+
       <!-- Audience Locale -->
       <fieldset name="locale" label="AUDIENCE_LOCALE_FIELDSET">
         <field name="sourceSite" type="list" default="3" label="SOURCESITE" description="SOURCESITE_DESC">
           <!-- Correct as of NOV2013. Get the latest eBay countries here:
           http://developer.ebay.com/DevZone/XML/docs/WebHelp/wwhelp/wwhimpl/common/html/wwhelp.htm?context=eBay_XML_API&file=FieldDifferences-Site_IDs.html
           Remember to update the language file!
-          -->            
+          -->
           <option value="15">AU</option>
-          <option value="16">AS</option>      
+          <option value="16">AS</option>
           <option value="23">BEFR</option>
-          <option value="123">BENL</option>      
+          <option value="123">BENL</option>
           <option value="2">CA</option>
           <option value="210">CAFR</option>
           <option value="71">FR</option>
           <option value="77">DE</option>
           <option value="201">HK</option>
           <option value="205">IE</option>
-          <option value="203">IN</option>      
+          <option value="203">IN</option>
           <option value="101">IT</option>
           <option value="207">MY</option>
           <option value="146">NL</option>
           <option value="211">PH</option>
           <option value="212">PL</option>
-          <option value="216">SG</option>      
+          <option value="216">SG</option>
           <option value="186">ES</option>
           <option value="193">CH</option>
           <option value="3">UK</option>
           <option value="0">US</option>
-          <option value="100">USMOTORS</option>      
+          <option value="100">USMOTORS</option>
         </field>
 
         <!-- Target Audience Time Zone -->
@@ -520,7 +519,7 @@ This module displays an eBay auction item in a Joomla! web page in a Joomla modu
           <option value="Europe/Warsaw">Europe/Warsaw</option>
           <option value="Europe/Zagreb">Europe/Zagreb</option>
           <option value="Europe/Zaporozhye">Europe/Zaporozhye</option>
-          <option value="Europe/Zurich">Europe/Zurich</option>          
+          <option value="Europe/Zurich">Europe/Zurich</option>
           <option value="Indian/Antananarivo">Indian/Antananarivo</option>
           <option value="Indian/Chagos">Indian/Chagos</option>
           <option value="Indian/Christmas">Indian/Christmas</option>
@@ -531,7 +530,7 @@ This module displays an eBay auction item in a Joomla! web page in a Joomla modu
           <option value="Indian/Maldives">Indian/Maldives</option>
           <option value="Indian/Mauritius">Indian/Mauritius</option>
           <option value="Indian/Mayotte">Indian/Mayotte</option>
-          <option value="Indian/Reunion">Indian/Reunion</option>          
+          <option value="Indian/Reunion">Indian/Reunion</option>
           <option value="Pacific/Apia">Pacific/Apia</option>
           <option value="Pacific/Auckland">Pacific/Auckland</option>
           <option value="Pacific/Chatham">Pacific/Chatham</option>
@@ -573,12 +572,11 @@ This module displays an eBay auction item in a Joomla! web page in a Joomla modu
           <option value="Pacific/Truk">Pacific/Truk</option>
           <option value="Pacific/Wake">Pacific/Wake</option>
           <option value="Pacific/Wallis">Pacific/Wallis</option>
-          <option value="Pacific/Yap">Pacific/Yap</option>          
+          <option value="Pacific/Yap">Pacific/Yap</option>
         </field>
-        
+
         <field name="summertimezone_override" type="text" size="5" default="" label="SUMMERTIME_ABR" description="SUMMERTIME_ABR_DESC"/>
         <field name="wintertimezone_override" type="text" size="5" default="" label="WINTERTIME_ABR" description="WINTERTIME_ABR_DESC"/>
-        
         <field name="date_format" type="text" size="5" default="Y-m-d" label="DATE_FORMAT" description="DATE_FORMAT_DESC"/>
 
         <!-- These time zones do not include for daylight savings and other political shenanigans -->
