@@ -31,13 +31,13 @@ This module displays an eBay auction item in a Joomla! web page in a Joomla modu
         </description>
         <element>mod_auctionaffiliate</element>
         <type>module</type>
-        <version>3.2.0v3</version>
+        <version>3.2.0v4</version>
         <client>site</client>
         <!-- Displays Info about this release -->
-        <infourl title="Auction Affiliate">https://github.com/gerritonagoodday/auction-affiliate/releases/tag/3.2.0v3</infourl>
+        <infourl title="Auction Affiliate">https://github.com/gerritonagoodday/auction-affiliate/releases/tag/3.2.0v4</infourl>
         <downloads>
             <!-- The actual URL where the zip file is downloaded from -->
-            <downloadurl type="full" format="zip">https://github.com/gerritonagoodday/auction-affiliate/releases/tag/3.2.0v3</downloadurl>
+            <downloadurl type="full" format="zip">https://github.com/gerritonagoodday/auction-affiliate/releases/download/3.2.0v4/mod_auctionaffiliate_3.2.0v4.zip</downloadurl>
         </downloads>
         <tags>
           <tag>stable</tag>

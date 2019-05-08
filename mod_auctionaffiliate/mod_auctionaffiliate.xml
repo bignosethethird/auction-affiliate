@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension type="module" version="3.2.0v3" client="site" method="upgrade">
+<extension type="module" version="3.2.0v4" client="site" method="upgrade">
   <name>MODULE_NAME</name>
   <author>Gerrit Hoekstra</author>
   <creationDate>November 2013</creationDate>
@@ -8,7 +8,7 @@
   <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
   <authorEmail>gerrit@hoekstra.co.uk</authorEmail>  
   <authorUrl>https://github.com/gerritonagoodday/auction-affiliate</authorUrl>
-  <version>3.2.0v3</version>
+  <version>3.2.0v4</version>
   
   <description><![CDATA[
         <div align="center">
@@ -16,7 +16,7 @@
             <tr>
               <td width="100%" colspan="2">
                 <div align="left">
-                  <h3>Auction Affiliate Module for Joomla! 3.x Version 3.2.0v3</h3>
+                  <h3>Auction Affiliate Module for Joomla! 3.x Version 3.2.0v4</h3>
                 </div>
                 <hr />
               </td>
