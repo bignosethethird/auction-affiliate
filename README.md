@@ -103,3 +103,30 @@ Lodge any issues you find and feature requests here:
 This is the brave new world of open source where giants cower in fear of the
 little man who releases a nice bit of usefull free software. Well, maybe not
 this piece of software, but you get the drift. Anywayz, it's GPL2-licensed.
+
+# F.A.Q.
+
+### How do I show many auction items on a page?
+
+You can do this by first installing Modules Anwhere from [Regular Labs](#https://www.regularlabs.com), which allows to instantiate a module using just its ID anywhere in an article. It is best to do this in the cell of a table or a responsive grid (see HTML below). You still need to create each module - here the module IDs as listed in the Joomla Extension Manager page ranged from 91 to 96:
+
+```html
+<table cellspacing="5" cellpadding="5">
+  <tbody>
+    <tr>
+      <td>{module id="96"} </td>
+      <td>{module id="91"} </td>
+      <td>{module id="92"} </td>
+    </tr>
+    <tr>
+      <td>{module id="93"} </td>
+      <td>{module id="94"} </td>
+      <td>{module id="95"} </td>
+    </tr>
+  </tbody>
+</table>
+```
+
+This should give you something that looks like this:
+
+![Many auction items on a page](images/multipleinstances.png)
