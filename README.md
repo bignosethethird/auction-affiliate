@@ -1,3 +1,5 @@
+# *Actung! This module is of no practical use any more, since the eBay API has radically changed.*
+
 # Auction Affiliate - A Joomla! Module for eBay Auctions
 
 >## _To advertise your eBay auction, direct web traffic to it and to draw affiliation revenue_
